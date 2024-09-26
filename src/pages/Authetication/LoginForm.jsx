@@ -27,20 +27,20 @@ const LoginForm = () => {
   return (
     <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
       <InputField
-        label="Phone"
+        label="ফোন"
         placeholder="Enter phone"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
       />
       <InputField
-        label="Password"
+        label="পাস্‌ওয়ার্ড"
         type="password"
         placeholder="Enter password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
       <Button type="submit" className="w-full">
-        Login
+      লগ-ইন করুন
       </Button>
     </form>
   );

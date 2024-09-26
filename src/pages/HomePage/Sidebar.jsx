@@ -21,40 +21,45 @@ const Sidebar = ({ isMenuOpen, toggleMenu }) => {
       } transition-transform duration-300 ease-in-out z-50`}
     >
       <div className="flex justify-between items-center p-4">
-        <h2 className="text-xl font-bold">Menu</h2>
+        <h2 className="text-xl font-bold">মেনু</h2>
         <button onClick={toggleMenu} className="text-white text-2xl">
           <AiOutlineClose />
         </button>
       </div>
       <nav className="flex flex-col p-6 space-y-4">
         <Link to="/" className="text-lg" onClick={toggleMenu}>
-          Home
+          হোম
         </Link>
-        <Link to="/about" className="text-lg" onClick={toggleMenu}>
-          About
+        <Link to="/category" className="text-lg" onClick={toggleMenu}>
+          কাজ খুঁজুন
         </Link>
-        <Link to="/contact" className="text-lg" onClick={toggleMenu}>
-          Contact
-        </Link>
-        <Link to="/settings" className="text-lg" onClick={toggleMenu}>
-          Settings
-        </Link>
+        
 
         {user ? (
           <button
             onClick={handleLogout}
             className="text-lg text-red-500 mt-4 bg-white py-2 px-4 rounded-md hover:bg-red-500 hover:text-white transition"
           >
-            Logout
+            লগ-আউট করুন
           </button>
         ) : (
-          <Link
-            to="/login"
-            onClick={toggleMenu}
-            className="text-center text-lg text-blue-500 mt-4 bg-white py-2 px-4 rounded-md hover:bg-blue-500 hover:text-white transition"
-          >
-            Login
-          </Link>
+          <div className="flex flex-col">
+            <Link
+              to="/login"
+              onClick={toggleMenu}
+              className="text-center text-lg text-blue-500 mt-4 bg-white py-2 px-4 rounded-md hover:bg-blue-500 hover:text-white transition"
+            >
+              লগ-ইন করুন
+            </Link>
+
+            <Link
+              to="/register"
+              onClick={toggleMenu}
+              className="text-center text-lg text-blue-500 mt-4 bg-white py-2 px-4 rounded-md hover:bg-blue-500 hover:text-white transition"
+            >
+              নিবন্ধন করুন
+            </Link>
+          </div>
         )}
       </nav>
     </div>

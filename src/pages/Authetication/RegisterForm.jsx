@@ -32,19 +32,19 @@ const RegisterForm = () => {
 
   return (
     <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-      <InputField label="Name" value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter your name" />
-      <InputField label="Phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Enter phone" />
-      <InputField label="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter email" />
-      <InputField label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter password" />
-      <InputField label="Profile Picture URL" value={picture} onChange={(e) => setPicture(e.target.value)} placeholder="Enter picture URL" />
+      <InputField label="নাম" value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter your name" />
+      <InputField label="ফোন" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Enter phone" />
+      <InputField label="ইমেইল" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter email" />
+      <InputField label="পাস্‌ওয়ার্ড" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter password" />
+      <InputField label="ছবি" value={picture} onChange={(e) => setPicture(e.target.value)} placeholder="Enter picture URL" />
       
-      <InputField label="District" value={address.district} onChange={(e) => setAddress({ ...address, district: e.target.value })} placeholder="Enter district" />
-      <InputField label="Upazila" value={address.upazila} onChange={(e) => setAddress({ ...address, upazila: e.target.value })} placeholder="Enter upazila" />
-      <InputField label="Union" value={address.union} onChange={(e) => setAddress({ ...address, union: e.target.value })} placeholder="Enter union" />
-      <InputField label="Village" value={address.village} onChange={(e) => setAddress({ ...address, village: e.target.value })} placeholder="Enter village" />
+      <InputField label="জেলা" value={address.district} onChange={(e) => setAddress({ ...address, district: e.target.value })} placeholder="Enter district" />
+      <InputField label="উপজেলা" value={address.upazila} onChange={(e) => setAddress({ ...address, upazila: e.target.value })} placeholder="Enter upazila" />
+      <InputField label="ইউনিয়ন" value={address.union} onChange={(e) => setAddress({ ...address, union: e.target.value })} placeholder="Enter union" />
+      <InputField label="গ্রাম" value={address.village} onChange={(e) => setAddress({ ...address, village: e.target.value })} placeholder="Enter village" />
       
       <Button type="submit" className="w-full">
-        Register
+      নিবন্ধন করুন
       </Button>
     </form>
   );

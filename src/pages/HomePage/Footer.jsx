@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-white shadow-inner py-4 px-6 flex justify-around items-center border-t">
+    <footer className="bg-white shadow-inner py-4 px-6 flex justify-around items-center border-t fixed bottom-0 left-0 w-full">
       <Link to="/" className="flex flex-col items-center text-blue-500">
         <FaHome size={24} />
         <span className="text-xs">Home</span>
