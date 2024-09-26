@@ -1,28 +1,27 @@
+// components/Sidebar.jsx
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
 import { useAuth } from "../../hooks/useAuth";
 
 const Sidebar = ({ isMenuOpen, toggleMenu }) => {
-  const { user, logout } = useAuth(); // Get the user and logout function from useAuth
+  const { user, logout } = useAuth();
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    logout(); // Call the logout function
-    navigate("/login"); // Redirect to login page
-    toggleMenu(); // Optionally close the sidebar
+    logout();
+    navigate("/login");
+    toggleMenu();
   };
 
   return (
     <div
-      id="sidebar"
       className={`fixed top-0 right-0 h-full bg-blue-500 text-white w-64 shadow-lg transform ${
         isMenuOpen ? "translate-x-0" : "translate-x-full"
       } transition-transform duration-300 ease-in-out z-50`}
     >
       <div className="flex justify-between items-center p-4">
         <h2 className="text-xl font-bold">Menu</h2>
-        {/* Close Icon in Sidebar */}
         <button onClick={toggleMenu} className="text-white text-2xl">
           <AiOutlineClose />
         </button>
@@ -40,8 +39,7 @@ const Sidebar = ({ isMenuOpen, toggleMenu }) => {
         <Link to="/settings" className="text-lg" onClick={toggleMenu}>
           Settings
         </Link>
-        
-        {/* Conditional Logout/Login Button */}
+
         {user ? (
           <button
             onClick={handleLogout}

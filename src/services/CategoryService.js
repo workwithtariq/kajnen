@@ -33,7 +33,7 @@ export class CategoryService {
         currentCategoryId = category.parentCategory;
       }
 
-      breadcrumbTrail.unshift({ name: "Category", _id: "" });
+      breadcrumbTrail.unshift({ name: "Categories", _id: "" });
       return breadcrumbTrail;
     } catch (error) {
       throw new Error(error.message || "Failed to fetch category breadcrumbs");
